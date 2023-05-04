@@ -1,14 +1,14 @@
 import './App.css';
-import LoginForm from './components/LoginForm/LoginForm'
 import { Route, Routes} from 'react-router-dom';
-import Dashboard from './components/Dashboard/Dashboard';
+import Home from './pages/Home/Home';
+import Courses from './pages/Courses/Courses'
 
 function App() {
   return (
     <>
      <Routes>
-        <Route path="/" exact element={<LoginForm />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" exact element={<Home />} />
+        <Route path="/kursy" element={<Courses />} />
     </Routes>
     </> 
   );
