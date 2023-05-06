@@ -3,6 +3,7 @@ import Navigation from '../../components/Navigation/Navigation';
 import Articles from '../../components/Articles/Articles';
 import ArticlesLeft from '../../components/Articles/ArticlesLeft/ArticlesLeft';
 import ArticlesRight from '../../components/Articles/AritclesRight/ArticlesRight';
+import Footer from '../../components/Footer/Footer';
 export default function Home() {
   return (
     <>
@@ -33,6 +34,7 @@ export default function Home() {
            The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32."
         />
       </Articles>
+      <Footer />
     </>
   );
 }
