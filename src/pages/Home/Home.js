@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Navigation from '../../components/Navigation/Navigation';
 import Articles from '../../components/Articles/Articles';
 import ArticlesLeft from '../../components/Articles/ArticlesLeft/ArticlesLeft';
 import ArticlesRight from '../../components/Articles/AritclesRight/ArticlesRight';
 import Footer from '../../components/Footer/Footer';
-export default function Home() {
+import { AppContext } from '../../context/loginButtonContext';
+
+export default function Home() {  
+  const { setIsHomePage } = useContext(AppContext);
+
+  useEffect(() => {
+    setIsHomePage(true);
+    return () => {
+      setIsHomePage(false);
+    };
+  }, [setIsHomePage]);
+      
   return (
     <>
       <Navigation />
